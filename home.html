@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <title>Guitar Tabs</title>
+  </head>
+  <body>    
+    <!--  Maybe ad on top-->
+
+    <!-- Head -->
+
+    <!-- <img href="assets/images/Bildschirmfoto 2024-10-16 um 21.46.12.png">-->
+
+    <!-- Darkmode toggle-->
+    <div class="container">
+        <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="#popular">Popular</a></li>
+            <li class="random-tab"><a href="#" id="random-tab-link">Random Tab</a></li>
+        </ul>
+    </nav>
+    <h1>Unlimited Tabs</h1>
+
+    <!-- Search bar form -->
+    <div class="search-container">
+        <form id="search-form" action="#" method="GET">
+            <input type="text" placeholder="Search for guitar tabs..." class="search-input">
+        </form>
+
+    <!-- Search results box -->
+        <div id="search-results-box">
+            <ul id="search-results"></ul>
+        </div>
+    </div>
+
+
+    <!-- Categories Section -->
+    <a href="categories.html" class="category-link">
+        <section class="category-section">
+            <div class="category-header">
+                <h2>Categories</h2>
+                <!--<a href="categories.html" class="category-link">-->
+                    <!--<button class="arrow-button">➔</button>-->
+                <!--</a>-->
+            </div>
+      
+        <!-- Scrollable section with top 10 categories, each with unique colors -->
+            <div class="category-scroll" id="category-scroll">
+                <!-- Categories will be populated here-->
+            </div>
+        </section>
+    </a>
+
+    <script src="assets/javascript/script.js"></script> 
+  </body>
+</html>
+
+<!-- h1 {
+    color: white;
+    font-weight:900;
+    font-family: 'Varela Round';font-size: 800%;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    padding: 50px;
+}
