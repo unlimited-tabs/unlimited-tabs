@@ -1,0 +1,465 @@
+/* style.css */
+body {
+   height: 100vh; /* Full height of the viewport */
+   background-color: white;
+   color: black;
+   font-family: 'Varela Round', sans-serif;
+   transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 6rem;
+  margin-top: 50px; /* Space above the heading */
+  margin-bottom: 30px; /* Space below the heading */
+  color: black;
+  transition: color 0.4s ease;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 500;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 5rem;
+  margin-top: 50px; /* Space above the heading */
+  margin-bottom: 30px; /* Space below the heading */
+  color: black;
+  transition: color 0.4s ease;
+}
+
+.container {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 200px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+body.dark-mode h1 {
+    /*background-color: #1f1f1f; */
+    color: white;
+}
+
+body.dark-mode h2 {
+    /*background-color: #1f1f1f; */
+    color: white;
+}
+
+
+
+
+
+/* Toggle switch styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #ffffff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: #000000;
+}
+
+/* Rounded slider */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+/* Navigation bar styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 10px;
+  transition: color 0.4s ease, border-bottom 0.3s ease;
+}
+
+body.dark-mode .menu li a {
+  color: white;
+}
+
+.menu li a:hover {
+  border-bottom: 2px solid black;
+}
+
+body.dark-mode .menu li a:hover {
+  border-bottom: 2px solid white;
+}
+
+
+
+
+/* Center the search container on the page */
+.search-container {
+  /*position: absolute; */ 
+  text-align: center;
+  width: 100%; /* Full width for the container */
+  max-width: 500px; /* Constrain maximum width of the search bar and results */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center elements within the container */
+  z-index: 1; /* Keep the search bar above the results */
+  margin: 0 auto 20px auto;
+}
+
+/* Search input styling */
+.search-input {
+  width: 100%; /* Full width to match the container width */
+  padding: 15px 20px; /* Adjust padding for better size */
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.2); /* Light mode background */
+  color: black;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: all 0.4s ease;
+}
+
+/* Dark mode for search input */
+body.dark-mode .search-input {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.search-input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-input:focus {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .search-input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+
+
+/* Search Results */
+/* Search results box */
+#search-results-box {
+  /*position: absolute; /* Relative to the .search-container */
+  padding: 10px;
+  /*top: 100%; /* Position it right below the search input */
+  width: 100%; /* Full width to match the search container */
+  background: rgba(255, 255, 255, 0.8); /* Light mode background */
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow */
+  opacity: 0; /* Initially hidden */
+  max-height: 0; /* Collapse the box initially */
+  overflow-y: hidden; /* Hide overflowing content */
+  transform-origin: top; /* Expand from the top */
+  transition: max-height 0.4s ease, opacity 0.4s ease, background 0.3s ease;
+  z-index: 0; /* Keep results behind the search bar */
+  margin-bottom: 40px;
+}
+
+/* Dark mode for search results box */
+body.dark-mode #search-results-box {
+  background: rgba(31, 31, 31, 0.8); /* Dark mode background */
+}
+
+/* Show the search results box when there are results */
+#search-results-box.active {
+  max-height: 300px; /* Allow it to expand */
+  opacity: 1;
+  overflow-y: auto; /* Allow scrolling if too many results */
+}
+
+#search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#search-results li {
+  margin: 10px 0;
+}
+
+#search-results a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  transition: color 0.4s ease;
+}
+
+#search-results a:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode for search results links */
+body.dark-mode #search-results a {
+  color: white;
+}
+
+
+
+
+
+/* Guitar Tabs Container */
+.tab-container {
+  background-color: rgba(255, 255, 255, 0.2); /* Light mode background */
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  margin: 20px auto;
+  max-width: 800px; /* Constrain maximum width */
+  overflow-x: auto; /* Allow horizontal scrolling for wide tabs */
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border for a cleaner look */
+}
+
+/* Dark mode for guitar tabs container */
+body.dark-mode .tab-container {
+  background-color: rgba(31, 31, 31, 0.8); /* Dark mode background */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border in dark mode */
+  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.1); /* Softer shadow in dark mode */
+}
+
+/* Song title styling */
+.tab-container h2 {
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  color: black;
+  margin-bottom: 20px;
+  font-size: 1.8rem; /* Adjust font size for clarity */
+  transition: color 0.4s ease;
+}
+
+/* Dark mode for song title */
+body.dark-mode .tab-container h2 {
+  color: white;
+}
+
+/* Guitar Tabs Styling */
+.guitar-tab {
+  font-family: 'Courier New', monospace; /* Monospaced font for proper tab alignment */
+  color: black;
+  white-space: pre; /* Preserve spaces for tab alignment */
+  font-size: 16px;
+  line-height: 1.6;
+  background: none;
+  border: none;
+  outline: none;
+  transition: color 0.4s ease;
+  overflow-x: auto; /* Allow horizontal scrolling if tab is too wide */
+}
+
+/* Dark mode for guitar tab text */
+body.dark-mode .guitar-tab {
+  color: white;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .tab-container {
+    max-width: 95%; /* Reduce the width for smaller screens */
+  }
+
+  .tab-container h2 {
+    font-size: 1.5rem; /* Reduce title font size on smaller screens */
+  }
+
+  .guitar-tab {
+    font-size: 14px; /* Make the tabs slightly smaller for readability on mobile */
+  }
+}
+
+
+
+
+
+
+/* Category Section Styling */
+.category-section {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2); /* Light mode background */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  transition: background 0.4s ease;
+}
+
+/* Dark mode for category section */
+body.dark-mode .category-section {
+  background-color: rgba(31, 31, 31, 0.8); /* Dark mode background */
+  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.1); /* Softer shadow in dark mode */
+}
+
+/* Grid layout for the categories */
+.category-scroll {
+  display: grid; /* Switch to grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Create responsive columns */
+  gap: 20px; /* Spacing between the boxes */
+  justify-content: center;
+  align-items: center;
+}
+
+
+.category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+/* Arrow button linking to full category page */
+.arrow-button {
+  background: none; /* No background */
+  border: none; /* No border */
+  color: black; /* Black text color in light mode */
+  font-size: 2rem; /* Size of the arrow */
+  padding: 0; /* No padding */
+  cursor: pointer; /* Change cursor on hover */
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+  margin-left: 10px;
+}
+
+/* Dark mode styles for arrow button */
+body.dark-mode .arrow-button {
+  color: white; /* White text color in dark mode */
+}
+
+/* Hover effect for arrow button */
+.arrow-button:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+/* Category boxes */
+.category-box {
+  min-width: 150px;
+  height: 150px; /* Maintain fixed height */
+  border-radius: 20px; /* Rounded corners */
+  display: flex;
+  justify-content: center; /* Centers text horizontally */
+  align-items: center; /* Centers text vertically */
+  transition: background 0.4s ease, color 0.4s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  cursor: pointer;
+}
+
+
+/* Anchor tag inside category box */
+.category-box a {
+  display: flex; /* Use flexbox to center text */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Fill the height of the box */
+  width: 100%; /* Fill the width of the box */
+  border-radius: 20px;
+  text-decoration: none; /* Remove underline */
+  color: black; /* Text color */
+  font-size: 1.2rem; /* Font size */
+  text-align: center; /* Center text */
+}
+
+/* Dark mode for category boxes */
+body.dark-mode .category-box a {
+  color: black; /* Change text color for dark mode */
+}
+
+/* Hover effect for category boxes */
+.category-box:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .category-box:hover {
+  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .category-box {
+    min-width: 120px;
+    height: 120px; /* Maintain fixed height */
+    font-size: 1rem;
+  }
+}
