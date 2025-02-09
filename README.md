@@ -2,7 +2,7 @@
 ### A modern, open source and free Guitar Tab platform
 
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/unlimited-tabs/unlimited-tabs?style=for-the-badge)](https://github.com/username/repository/stargazers)
+[![GitHub Repo stars](https://img.shields.io/github/stars/unlimited-tabs/unlimited-tabs?style=for-the-badge)](https://github.com/unlimited-tabs/unlimited-tabs/stargazers)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/3358974f71ac42308e0a81b4a2da9703)](https://app.codacy.com/gh/unlimited-tabs/unlimited-tabs.github.io/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 
