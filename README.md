@@ -1,5 +1,22 @@
 ## Hi there 👋
 
+
+
+
+
+<!-- Next Goals: 
+- README File
+- Mobile Flexibility
+- Tuner
+- Ads
+- First Real Songs
+>
+
+
+
+
+
+
 <!--
 **unlimited-tabs/unlimited-tabs** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
