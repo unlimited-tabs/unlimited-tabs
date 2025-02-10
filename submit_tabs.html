@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google-adsense-account" content="ca-pub-8641795399059863">
+        <title>Tab Submission</title>
+    </head>
+    <form action="submit-tab.php" method="POST">
+        <label for="tab-title">Tab Title:</label>
+        <input type="text" id="tab-title" name="title" required>
+    
+        <label for="tab-content">Tab Content:</label>
+        <textarea id="tab-content" name="content" required></textarea>
+    
+        <input type="checkbox" id="tos-agree" required>
+        <label for="tos-agree">
+            I agree to the <a href="tos.html">Terms of Service</a>.
+        </label>
+    
+        <button type="submit">Submit</button>
+    </form>
+</html>

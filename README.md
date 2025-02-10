@@ -2,17 +2,17 @@
 ### A modern, open source and free Guitar Tab platform
 
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/unlimited-tabs/unlimited-tabs?style=for-the-badge)](https://github.com/username/repository/stargazers)
+[![GitHub Repo stars](https://img.shields.io/github/stars/unlimited-tabs/unlimited-tabs?style=for-the-badge)](https://github.com/unlimited-tabs/unlimited-tabs/stargazers)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/3358974f71ac42308e0a81b4a2da9703)](https://app.codacy.com/gh/unlimited-tabs/unlimited-tabs.github.io/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 
 ## 📖 Table of Contents
-- [Your Involvement](#your-involvement)
+- [How can You Help](#how-can-you-help)
 - [Features](#features)
 - [Terms of Service](#📜-terms-of-service)
 - [DMCA Takedown Policy](#🚨-dmca-takedown-policy)
 
-## Your involvement
+## How can You Help
 - We need your help, this is an open source guitar tab platform, <br>
 - We need users to submit tabs or help developing this site
 
