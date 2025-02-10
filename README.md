@@ -20,6 +20,7 @@
 ## Features
 - Real Songs to be added when licensed to use them
 - **Smooth, modern UI**
+- songs categorized in genres
 
 ## Legal Information
 - By using this website, you agree to our [Terms of Service](https://unlimited-tabs.github.io/tos.html).  
