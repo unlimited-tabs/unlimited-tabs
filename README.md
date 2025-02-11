@@ -16,6 +16,11 @@
 - We need users to submit tabs or help developing this site
 
 ### 1. How to Submit Tabs
+#### Now:
+- You can add tabs by creating an html file in the tabs folder
+
+#### Soon:
+- We are working on an submission form, where you can easily create tabs
 
 ## Features
 - Real Songs to be added when licensed to use them
